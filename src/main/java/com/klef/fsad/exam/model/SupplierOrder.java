@@ -10,16 +10,17 @@ import java.util.Date;
 public class SupplierOrder {
 
     @Id
-    private String supplierOrderId;  // Manual ID input
+    private String supplierOrderId;  // Manual ID
 
     private String name;
     private Date date;
     private String status;
-    private String description; // optional
+    private String description;
 
-    // Constructors
+    // Default constructor
     public SupplierOrder() {}
 
+    // Constructor with fields
     public SupplierOrder(String supplierOrderId, String name, Date date, String status, String description) {
         this.supplierOrderId = supplierOrderId;
         this.name = name;

@@ -4,7 +4,6 @@ import com.klef.fsad.exam.model.SupplierOrder;
 import com.klef.fsad.exam.service.SupplierOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -12,17 +11,17 @@ import java.util.List;
 public class SupplierOrderController {
 
     @Autowired
-    private SupplierOrderService supplierOrderService;
+    private SupplierOrderService service;
 
     // POST: Add SupplierOrder
     @PostMapping("/add")
     public SupplierOrder addSupplierOrder(@RequestBody SupplierOrder order) {
-        return supplierOrderService.addSupplierOrder(order);
+        return service.addSupplierOrder(order);
     }
 
-    // GET: Fetch all SupplierOrders
+    // GET: Get all SupplierOrders
     @GetMapping("/all")
     public List<SupplierOrder> getAllSupplierOrders() {
-        return supplierOrderService.getAllSupplierOrders();
+        return service.getAllSupplierOrders();
     }
 }
